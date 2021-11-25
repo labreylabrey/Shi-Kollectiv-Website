@@ -1,0 +1,296 @@
+@import url('http://fonts.cdnfonts.com/css/sofia-pro');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: 'Sofia Pro', 'Courier New', Courier, monospace;
+  font-size: 1em;
+  line-height: 1.5;
+  overflow: auto;
+  cursor: alias;
+}
+
+header {
+  width: 100%;
+}
+
+canvas {
+  display: inline-block;
+}
+/* Scale canvas with resize attribute to full size */
+canvas[resize] {
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+li{
+  list-style: none;
+}
+
+a {
+  color: #262626;
+  text-decoration: none;
+}
+
+.navbar{
+  min-height: 60px;
+  position: fixed;
+  left: 50%;
+  padding: 23px 24px;
+}
+
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link{
+  transition: 0.7s ease;
+}
+
+.nav-link:hover{
+  color: #f9a56b;
+}
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #222222;
+  border-radius: 2px;
+}
+
+.logo {
+  position: absolute;
+  max-width: 80%;
+  max-height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img.nav-link {
+  display: none;
+}
+
+.footer {
+background: #eeeeee;
+opacity: 0.7;
+bottom: 0;
+left: 0;
+padding: 15px 0;
+position: fixed;
+right: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+
+}
+
+a.mailto {
+  color: #222222;
+  z-index: 100;
+  background: url("../img/wave.svg");
+  background-repeat: repeat;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto auto;
+  background-repeat: repeat-x;
+  background-size: 15px 5px;
+  background-position: 2px 19px;
+  animation: move 15s linear infinite;
+  -webkit-animation: move 15s linear infinite;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  animation-play-state: running;
+}
+
+@-webkit-keyframes move {
+from {
+  background-position: 2px 19px;
+}
+to {
+  background-position: 500px 19px;
+}
+}
+
+@keyframes move {
+from {
+  background-position: 2px 19px;
+}
+to {
+  background-position: 500px 19px;
+}
+}
+
+img[alt="icon_big"] {
+display: inline-block;
+padding: 5px;
+margin-right: 20px;
+float: right;
+max-width: 40px;
+padding-top: 5px;
+}
+
+#mce-EMAIL {
+display: inline-block;
+top: 10%;
+left: 50%;
+line-height: 0;
+margin: 0;
+transform: translate(-50%);
+font-size: .9em;
+width: 150%;
+border: 0;
+border-bottom: 1px solid #222;
+padding: 10px;
+background: #eeeeee;
+text-align: left;
+}
+
+input:focus, textarea:focus, select:focus {
+outline: none;
+}
+
+.btSend {
+position: absolute;
+left: 65%;
+transform: translate(-65%);
+padding: 10px;
+color: #222;
+border: 1px dashed #222;
+font-size: 0.7em;
+border-radius: 5px;
+top: 27%;
+}
+
+/*MEDIA QUERIES*/
+
+@media(min-width:1200px) {
+  .navbar {
+    left: 61.05%;
+  }
+
+  .btSend {
+    left: 60%;
+  }
+}
+
+
+@media(max-width:1020px){
+  
+  canvas {
+    display: none;
+  }
+
+  body {
+      overflow: auto;
+  }
+  
+  .hamburger{
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu{
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #222222;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 9999;
+  }
+
+   img.sun {
+     display: none;
+   }
+
+   p.about {
+    width: 90%;
+}
+
+  .navbar {
+    left: 82%;
+  }
+  
+
+  .nav-item{
+    margin: 16px 30px;
+  }
+
+  .nav-menu.active{
+    left: 0;
+  }
+
+  h1.title.active {
+      visibility: hidden;
+  }
+
+  a.nav-link {
+      color: #ffffff;
+    }
+
+    img.nav-link {
+      display: flex;
+      max-width: 30px;
+    }
+
+    .logo {
+      max-height: 60%;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 24px;
+  
+    }
+
+    form {
+      display: none;
+    }
+
+    a.mailto {
+      padding-bottom: 10px;
+    }
+
+    img[alt="icon_big"] {
+      display: none;
+    }
+}
