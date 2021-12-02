@@ -399,7 +399,7 @@ input:focus, textarea:focus, select:focus {
         align-self: flex-start;
         justify-content: flex-start;
         max-width: 90%;
-        min-height: 1500px;
+        min-height: 1300px;
       }
 
       .left {
