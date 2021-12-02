@@ -1,4 +1,4 @@
-@import url('http://fonts.cdnfonts.com/css/sofia-pro');
+@import url('https://fonts.cdnfonts.com/css/sofia-pro');
 
 * {
     box-sizing: border-box;
@@ -204,14 +204,21 @@
   }
 
   .built {
-    float: right;
+    position: absolute;
+    left: 80%;
+    top: 85%;
     color: rgb(252, 62, 141);
     padding: 0 20px;
   }
 
   a.built {
+    position: absolute;
+    left: 85%;
+    top: 7%;
     color: rgb(37, 128, 37);
+    width: 100%;
   }
+  
   
 
  .footer {
@@ -319,6 +326,7 @@ input:focus, textarea:focus, select:focus {
   .btSend {
     left: 60%;
   }
+
 }
 
 @media(max-width:1020px){
