@@ -202,6 +202,16 @@
   .email {
     gap: 30px;
   }
+
+  .built {
+    float: right;
+    color: rgb(252, 62, 141);
+    padding: 0 20px;
+  }
+
+  a.built {
+    color: rgb(37, 128, 37);
+  }
   
 
  .footer {
@@ -379,6 +389,10 @@ input:focus, textarea:focus, select:focus {
       text-align: center;
       top: 57%;
     }
+
+    .built {
+      display: none;
+      }
 
     .mailchimp {
       position: absolute;
